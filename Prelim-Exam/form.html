@@ -17,18 +17,19 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-sm bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"> {Group No.} </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh3WRuGYDBpFUbZMH7se086UPCz_H6JfAPmA&s" alt="dct-logo" width="40" height="40">
+        </a>
+        <a class="navbar-brand" href="#">{Group No.}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="student.html">Students</a>
+                    <a class="nav-link" href="students.html">Students</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="attendance.html">Attendance</a>
@@ -37,129 +38,130 @@
                     <a class="nav-link active" href="form.html">Form</a>
                 </li>
             </ul>
+            <form class="d-flex">
+                <input class="form-control me-2 bg-light" type="search" placeholder="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
     </div>
 </nav>
 
 <!-- Form Container -->
-<div class="container mt-5">
-    <h2 class="text-center mb-4">Add Student Form</h2>
-    <div class="row g-4">
-        <!-- Left side: profile pic upload -->
-        <div class="col-md-3 text-center">
-            <img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" alt="Student" class="profile-pic rounded-circle pb-5 pt-5">
-            <input type="file" class="form-control" required>
-        </div>
+<div class="container my-5">
+        <h2 class="text-center mb-4">Add Student Form</h2>
+        <div class="row g-4">
+            <!-- Left side: profile pic upload -->
+            <div class="col-md-3 text-center">
+                <img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" alt="Student" class="profile-pic rounded-circle pb-5 pt-5">
+                <input type="file" class="form-control" required>
+            </div>
 
-        <!-- Right side: form fields -->
-        <div class="col-md-9">
-            <form class="row g-3 needs-validation" novalidate>
-                <!-- Name -->
-                <div class="col-md-4">
-                    <label class="form-label">Last Name</label>
-                    <input type="text" class="form-control" placeholder="ex. Juan" required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">First Name</label>
-                    <input type="text" class="form-control" placeholder="ex. Dela Cruz" required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Middle Name</label>
-                    <input type="text" class="form-control" placeholder="ex. Cruz">
-                    <div class="valid-feedback">Optional</div>
-                </div>
-
-                <!-- Gender -->
-                <div class="col-md-4">
-                    <label class="form-label">Gender</label><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" value="Male" required>
-                        <label class="form-check-label">Male</label>
+            <!-- Right side: form fields -->
+            <div class="col-md-9">
+                <form class="row g-3 needs-validation" novalidate>
+                    <!-- Name -->
+                    <div class="col-md-4">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="ex. Juan" required>
+                        <div class="invalid-feedback">Required</div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" value="Female" required>
-                        <label class="form-check-label">Female</label>
+                    <div class="col-md-4">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" placeholder="ex. Dela Cruz" required>
+                        <div class="invalid-feedback">Required</div>
                     </div>
-                </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Middle Name</label>
+                        <input type="text" class="form-control" placeholder="ex. Cruz">
+                        <div class="valid-feedback">Optional</div>
+                    </div>
 
-                <!-- Civil Status -->
-                <div class="col-md-4">
-                    <label class="form-label">Civil Status</label>
-                    <select class="form-select" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>Single</option>
-                        <option>Married</option>
-                    </select>
-                    <div class="invalid-feedback">Required</div>
-                </div>
+                    <!-- Gender -->
+                    <div class="col-md-4">
+                        <label class="form-label">Gender</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" value="Male" required>
+                            <label class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" value="Female" required>
+                            <label class="form-check-label">Female</label>
+                        </div>
+                    </div>
 
-                <!-- Date of Birth -->
-                <div class="col-md-4">
-                    <label class="form-label">Date of Birth</label>
-                    <input type="date" class="form-control" required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
+                    <!-- Civil Status -->
+                    <div class="col-md-4">
+                        <label class="form-label">Civil Status</label>
+                        <select class="form-select" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>Single</option>
+                            <option>Married</option>
+                        </select>
+                        <div class="invalid-feedback">Required</div>
+                    </div>
 
-                <!-- More Fields -->
-                <div class="col-md-4">
-                    <label class="form-label">Place of Birth</label>
-                    <input type="text" class="form-control" placeholder="ex. Tarlac City" required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Nationality</label>
-                    <input type="text" class="form-control" placeholder="ex. Filipino" required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Religion</label>
-                    <input type="text" class="form-control" placeholder="ex. Roman Catholic" required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Contact No.</label>
-                    <input type="text" class="form-control" placeholder="09XXXXXXXXX" pattern="^09\d{9}$" required>
-                    <div class="invalid-feedback">Invalid Pattern</div>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" placeholder="ex. JuanD@email.com" required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Street</label>
-                    <input type="text" class="form-control" placeholder="ex. 85th Subd." required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Barangay</label>
-                    <input type="text" class="form-control" placeholder="ex. Sto. Rosario" required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">City</label>
-                    <input type="text" class="form-control" placeholder="ex. Capas" required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label">Province</label>
-                    <input type="text" class="form-control" placeholder="ex. Tarlac" required>
-                    <div class="invalid-feedback">Required</div>
-                </div>
+                    <!-- Date of Birth -->
+                    <div class="col-md-4">
+                        <label class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" required>
+                        <div class="invalid-feedback">Required</div>
+                    </div>
 
-                <!-- Submit -->
-                <div class="col-12">
-                    <button class="btn btn-success" type="submit">Add Student</button>
-                </div>
-            </form>
+                    <!-- More Fields -->
+                    <div class="col-md-4">
+                        <label class="form-label">Place of Birth</label>
+                        <input type="text" class="form-control" placeholder="ex. Tarlac City" required>
+                        <div class="invalid-feedback">Required</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Nationality</label>
+                        <input type="text" class="form-control" placeholder="ex. Filipino" required>
+                        <div class="invalid-feedback">Required</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Religion</label>
+                        <input type="text" class="form-control" placeholder="ex. Roman Catholic" required>
+                        <div class="invalid-feedback">Required</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Contact No.</label>
+                        <input type="text" class="form-control" placeholder="09XXXXXXXXX" pattern="^09\d{9}$" required>
+                        <div class="invalid-feedback">Invalid Pattern</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="ex. JuanD@email.com" required>
+                        <div class="invalid-feedback">Required</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Street</label>
+                        <input type="text" class="form-control" placeholder="ex. 85th Subd." required>
+                        <div class="invalid-feedback">Required</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Barangay</label>
+                        <input type="text" class="form-control" placeholder="ex. Sto. Rosario" required>
+                        <div class="invalid-feedback">Required</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control" placeholder="ex. Capas" required>
+                        <div class="invalid-feedback">Required</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Province</label>
+                        <input type="text" class="form-control" placeholder="ex. Tarlac" required>
+                        <div class="invalid-feedback">Required</div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="col-12">
+                        <button class="btn btn-success" type="submit">Add Student</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
+  
 </div>
 
 <script>
